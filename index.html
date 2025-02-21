@@ -1,0 +1,119 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的主页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #6200ea;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3700b3;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn {
+            background-color: #6200ea;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 头部 -->
+    <header>
+        <h1>欢迎来到我的主页</h1>
+        <p>这是我的个人网站，用于展示我的项目和作品。</p>
+    </header>
+
+    <!-- 导航栏 -->
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+    </nav>
+
+    <!-- 主体内容 -->
+    <main>
+        <section id="about">
+            <h2>关于我</h2>
+            <p>我是一个热爱编程和设计的开发者，专注于前端开发和用户体验。</p>
+        </section>
+
+        <section id="projects">
+            <h2>我的项目</h2>
+            <p>这里展示了我的一些项目，点击按钮了解更多。</p>
+            <button class="btn" onclick="showProjects()">查看项目</button>
+            <ul id="project-list" style="display: none;">
+                <li>项目 1：个人博客</li>
+                <li>项目 2：在线商店</li>
+                <li>项目 3：任务管理工具</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>联系我</h2>
+            <p>如果你有任何问题，欢迎通过以下方式联系我：</p>
+            <p>邮箱：<a href="mailto:example@example.com">example@example.com</a></p>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2023 我的主页. 保留所有权利.</p>
+    </footer>
+
+    <script>
+        // JavaScript 交互功能
+        function showProjects() {
+            const projectList = document.getElementById('project-list');
+            if (projectList.style.display === 'none') {
+                projectList.style.display = 'block';
+            } else {
+                projectList.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
